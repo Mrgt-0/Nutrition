@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "d176dfcf-2bcb-4afb-814b-87f70c554d35",
+		"name": "Nutrition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40985637"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Gleb",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "gleb_1999@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "36",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "70",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "180",
+									"type": "text"
+								},
+								{
+									"key": "target",
+									"value": "набирать вес",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "мужской",
+									"type": "text"
+								},
+								{
+									"key": "activityLevel",
+									"value": "1.725",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "123@mail.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "calculator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/calculator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addMeals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "mealName",
+							"value": "Обед",
+							"type": "text"
+						},
+						{
+							"key": "dishNames[]",
+							"value": "Макароны по Флотски",
+							"type": "text"
+						},
+						{
+							"key": "dishNames[]",
+							"value": "Салат Цезарь",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/addMeals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addMeals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addDish",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Макароны по Флотски",
+							"type": "text"
+						},
+						{
+							"key": "calories",
+							"value": "195",
+							"type": "text"
+						},
+						{
+							"key": "protein",
+							"value": "7.16",
+							"type": "text"
+						},
+						{
+							"key": "fats",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "carbohydrates",
+							"value": "21.25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/addDish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addDish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reports",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "2025-04-05",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/reports/daily",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"reports",
+						"daily"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
